@@ -232,10 +232,6 @@ span {
 }
 
 @media(max-width:991px) {
-    section {
-        padding: 10rem 3% 2rem;
-    }
-
     .timeline-items:before {
         left: 7px;
     }
@@ -297,9 +293,9 @@ span {
         margin-right: auto;
     }
     .btm {
-        padding: 0.9rem 1.9rem;
-        font-size: 1.3rem;
+        padding: 15px 10px;
+        font-size: 24px;
         letter-spacing: 0.5px;
-        font-weight: 600;
+        font-weight: 700;
     }
 }

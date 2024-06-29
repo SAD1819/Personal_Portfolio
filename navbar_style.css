@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -106,4 +107,110 @@ body {
 
 .dropdown-menu li {
     margin-left: 0;
+=======
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: rgb(146, 255, 255);
+    font-weight: normal;
+    background-color: rgb(11, 11, 31);
+    margin: 0;
+    --nav-height: 104px;
+
+    padding-top: var(--nav-height);
+}
+
+.lego{
+    font-size: 1.5rem;
+    color: bisque;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.lego:hover{
+    transform: scale(1.1);
+}
+
+.lego span{
+    text-shadow: 0 0 25px #B1F9FF;
+    color: rgb(146, 255, 255);
+}
+
+.offcanvas{
+    flex-grow: 0 !important;
+}
+
+.custom-navbar {
+    background-color: #110b24 !important;
+    transition: transform 0.3s;
+}
+
+.c-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+}
+
+.c-navbar.hidden {
+    transform: translateY(calc(-1 * var(--nav-height)));
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 25px;
+    color: aqua;
+    font-size: 1.03em;
+}
+
+.navbar .brand-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar .brand-wrapper .logo {
+    margin-bottom: 0.5rem;
+}
+
+.offcanvas-header .text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.offcanvas-header .logo {
+    margin-bottom: 0.5rem;
+>>>>>>> e676e33d53c3bd4615c90e9903d0e77949d337af
 }

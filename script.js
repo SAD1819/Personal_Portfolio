@@ -39,3 +39,49 @@ document.addEventListener("DOMContentLoaded", function() {
         document.documentElement.scrollTop = 0;
     });
 });
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const fullName = document.getElementById("fullName").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById('message').value;
+
+    sendEmail(fullName, email, subject, message);
+
+    function sendEmail(fullName, email, subject, message) {
+        const bodyMessage = `Full Name: ${fullName}<br> Email ID: ${email}<br> Message: ${message}`;
+
+        Email.send({
+            SecureToken : "e65f1029-0baa-4545-a82d-f2100ab292ee",
+            To: 'sad2041999@gmail.com',
+            From: "sad2041999@gmail.com",
+            Subject: subject,
+            Body: bodyMessage
+        })
+        .then(response => {
+            if(response === "OK") {
+                Swal.fire({
+                    title: "Success!",
+                    text: "Message Sent Successfully!",
+                    icon: "success"
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "There was an error submitting the form: " + response,
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!",
+            });
+        });
+    }
+});
